@@ -1,3 +1,0 @@
-VideoTime portable package
-
-Run videotime.exe. No installer, FFmpeg, or additional runtime is required.

@@ -1,5 +1,0 @@
-VideoTime native MP4 duration utility
-
-Small portable C11/Win32 utility experiment for reading MP4 duration metadata.
-The repository focuses on source, build instructions, and reproducible tests;
-it is not a media repair or transcoding product.

@@ -1,0 +1,11 @@
+VideoTime 1.2.0 - experimental software
+
+Use at your own risk.
+
+Video and audio hourly prices are independent. Both fields start blank on each launch; changing one does not update the other. Settings now has an optional Remember window size and position checkbox, off by default. When enabled, the app saves its size, position, and maximized state for the next launch.
+
+VideoTime supports local MP4, MP3, and JPEG pricing. Photos start at $1.00 each. It shows separate video, audio, and photo totals plus a grand total. Settings also offers font and Light, Dark, Blue, Navy, and Pastel themes.
+
+The app uses Windows media components. No installer, bundled FFmpeg, or upload is required. The portable package contains no user media or test-only audio.
+
+Checks: 61 native checks passed; CTest passed; isolated live Windows check confirmed independent price fields and window placement persistence. Screenshots show the main window and Settings with no user media loaded.

@@ -1,10 +1,11 @@
 #include <windows.h>
+#include "resource.h"
 
 1 ICON "assets\\videotime.ico"
 
 1 VERSIONINFO
- FILEVERSION 1,0,0,0
- PRODUCTVERSION 1,0,0,0
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
  FILEFLAGSMASK 0x3fL
  FILEOS 0x40004L
  FILETYPE 0x1L
@@ -14,13 +15,38 @@ BEGIN
     BLOCK "040904b0"
     BEGIN
       VALUE "FileDescription", "VideoTime"
-      VALUE "FileVersion", "1.0.0"
+      VALUE "FileVersion", "1.2.0"
       VALUE "ProductName", "VideoTime"
-      VALUE "ProductVersion", "1.0.0"
+      VALUE "ProductVersion", "1.2.0"
     END
   END
   BLOCK "VarFileInfo"
   BEGIN
     VALUE "Translation", 0x409, 1200
   END
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 340, 342
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VideoTime Settings"
+FONT 10, "Segoe UI"
+BEGIN
+    LTEXT "Font type:", -1, 14, 16, 95, 15
+    COMBOBOX IDC_FACE, 122, 13, 200, 140, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Font size (points):", -1, 14, 48, 105, 15
+    COMBOBOX IDC_POINTS, 122, 45, 200, 140, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "High contrast theme:", -1, 14, 80, 105, 15
+    COMBOBOX IDC_THEME, 122, 77, 200, 140, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Video hourly rate ($):", -1, 14, 112, 105, 15
+    EDITTEXT IDC_VIDEO_RATE, 122, 109, 200, 21, ES_RIGHT | ES_AUTOHSCROLL | WS_TABSTOP
+    LTEXT "Audio hourly rate ($):", -1, 14, 144, 105, 15
+    EDITTEXT IDC_AUDIO_RATE, 122, 141, 200, 21, ES_RIGHT | ES_AUTOHSCROLL | WS_TABSTOP
+    LTEXT "Cost per photo ($):", -1, 14, 178, 105, 15
+    EDITTEXT IDC_PHOTO_RATE, 122, 175, 200, 21, ES_RIGHT | ES_AUTOHSCROLL | WS_TABSTOP
+    LTEXT "Photo pricing applies to JPG/JPEG files. Default: $1.00 each.", -1, 14, 208, 310, 16
+    CONTROL "Remember window size and position", IDC_REMEMBER_WINDOW, "BUTTON", BS_AUTOCHECKBOX | WS_TABSTOP, 14, 236, 308, 20
+    LTEXT "Hourly rates are independent and start blank on each launch.", -1, 14, 263, 310, 16
+    LTEXT "", IDC_ERROR, 14, 280, 310, 24
+    CONTROL "Save", IDOK, "BUTTON", BS_OWNERDRAW | WS_TABSTOP, 164, 314, 76, 22
+    CONTROL "Cancel", IDCANCEL, "BUTTON", BS_OWNERDRAW | WS_TABSTOP, 246, 314, 76, 22
 END
